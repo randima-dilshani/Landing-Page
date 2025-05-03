@@ -50,7 +50,7 @@ export default function EventOverview() {
   variants={fadeInUp}
   className="font-bold bg-gradient-to-r from-pink-500 via-red-400 to-yellow-300 text-transparent bg-clip-text mb-6"
   style={{
-    fontSize: "56px", // ~equivalent to md:text-4xl or larger
+    fontSize: "56px", 
     lineHeight: "1.2",
     textAlign: "center",
     letterSpacing: "-0.02em"
@@ -92,7 +92,7 @@ export default function EventOverview() {
           variants={slideFromLeft}
         >
           <img
-            src="/image3.jpg" // Make sure this image is placed in your public folder as 'public/10.png'
+            src="/image3.jpg" 
             alt="Event Reasons"
             className="w-full h-auto object-cover rounded-2xl"
           />
