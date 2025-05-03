@@ -81,40 +81,40 @@ export default function EventOverview() {
 
       {/* Reasons to attend block */}
       <motion.div
-        className="relative z-10 max-w-6xl mx-auto mt-24 flex flex-col md:flex-row items-center gap-10 bg-[#5f23b1] p-10 rounded-[3rem]"
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.3 }}
-      >
-        {/* Image */}
-        <motion.div
-          className="w-full md:w-1/2 rounded-2xl overflow-hidden"
-          variants={slideFromLeft}
-        >
-          <img
-            src="/image3.jpg" 
-            alt="Event Reasons"
-            className="w-full h-auto object-cover rounded-2xl"
-          />
-        </motion.div>
+  className="relative z-10 max-w-6xl mx-auto mt-24 flex flex-col md:flex-row items-center gap-10 bg-[#5f23b1] p-10 rounded-[3rem]"
+  initial="hidden"
+  whileInView="show"
+  viewport={{ once: true, amount: 0.3 }}
+>
+  {/* Reasons list - Now on the left */}
+  <motion.div
+    className="w-full md:w-1/2 text-left text-white"
+    variants={slideFromLeft}
+  >
+    <h3 className="text-2xl md:text-3xl font-semibold mb-6">
+      Top Reasons Why This is the Only Conference You Need to Attend in 2025
+    </h3>
+    <ul className="space-y-4 text-lg leading-7">
+      <li>💡 Learn from industry experts</li>
+      <li>📈 Stay ahead of emerging trends</li>
+      <li>🤝 Connect with fellow banking professionals</li>
+      <li>🎓 Enhance your knowledge, skills, and network</li>
+      <li>💬 Share your expertise and experience with peers</li>
+    </ul>
+  </motion.div>
 
-        {/* Reasons list */}
-        <motion.div
-          className="w-full md:w-1/2 text-left text-white"
-          variants={slideFromRight}
-        >
-          <h3 className="text-2xl md:text-3xl font-semibold mb-6">
-            Top Reasons Why This is the Only Conference You Need to Attend in 2025
-          </h3>
-          <ul className="space-y-4 text-lg leading-7">
-            <li>💡 Learn from industry experts</li>
-            <li>📈 Stay ahead of emerging trends</li>
-            <li>🤝 Connect with fellow banking professionals</li>
-            <li>🎓 Enhance your knowledge, skills, and network</li>
-            <li>💬 Share your expertise and experience with peers</li>
-          </ul>
-        </motion.div>
-      </motion.div>
+  {/* Image - Now on the right */}
+  <motion.div
+    className="w-full md:w-1/2 rounded-2xl overflow-hidden"
+    variants={slideFromRight}
+  >
+    <img
+      src="/image3.jpg"
+      alt="Event Reasons"
+      className="w-full h-auto object-cover rounded-2xl"
+    />
+  </motion.div>
+</motion.div>
     </section>
   );
 }
