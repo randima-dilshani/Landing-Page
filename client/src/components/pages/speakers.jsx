@@ -101,7 +101,7 @@ export default function SpeakersPage() {
       <motion.h2
   className="text-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-red-400 to-yellow-300 mb-16 tracking-tight"
   style={{
-    fontSize: "56px",       // Equivalent to text-5xl or larger
+    fontSize: "56px",       
     lineHeight: "1.2",
     letterSpacing: "-0.02em"
   }}

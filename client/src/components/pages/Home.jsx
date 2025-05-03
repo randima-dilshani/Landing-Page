@@ -30,6 +30,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="mt-[120px] flex flex-col md:flex-row items-center justify-center gap-10 px-6 py-24 relative z-10 overflow-hidden">
+        
         {/* Background Glows */}
         <div className="absolute inset-0 overflow-hidden -z-10">
           <div className="absolute top-20 left-10 w-80 h-80 bg-purple-700 opacity-20 blur-3xl rounded-full animate-pulse" />
@@ -53,6 +54,19 @@ export default function Home() {
           transition={{ duration: 1 }}
           className="w-[520px] md:w-[600px] lg:w-[600px] bg-white/5 backdrop-blur-lg p-10 rounded-2xl shadow-2xl z-10 text-center border border-white/10"
         >
+          {/* Highlighted Host Text */}
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1, duration: 1 }}
+            className="mb-6"
+          >
+            <p className="text-2xl md:text-3xl text-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400 uppercase tracking-wider drop-shadow-lg">
+              Hosted by FINASTRA
+            </p>
+          </motion.div>
+
+          {/* Title and Subtitle */}
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -70,13 +84,8 @@ export default function Home() {
             Adapt. Evolve. Thrive.
           </motion.h2>
 
+          {/* Event Info */}
           <div className="space-y-2">
-            <p className="text-xl text-gray-300">
-              Hosted by{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400 font-extrabold text-3xl underline underline-offset-4 drop-shadow-md">
-                FINASTRA
-              </span>
-            </p>
             <p className="text-base text-gray-300">
               📅 9th July 2025 • 🕤 9:30 AM - 2:00 PM GMT+2
             </p>
