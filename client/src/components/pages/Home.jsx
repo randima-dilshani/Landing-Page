@@ -6,6 +6,7 @@ import SpeakersPage from "./speakers";
 import Agenda from "./agenda";
 import About from "./about";
 import Footer from "./footer";
+import Navbar from "./navBar";
 
 export default function Home() {
   const [daysLeft, setDaysLeft] = useState(0);
@@ -23,34 +24,12 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="relative min-h-screen text-white font-sans overflow-hidden bg-gradient-to-tr from-[#1a0033] via-black to-[#0f0c29]">
+    <div className="relative min-h-screen text-white font-sans bg-gradient-to-tr from-[#1a0033] via-black to-[#0f0c29] scroll-smooth">
       {/* Navbar */}
-      <header className="relative z-50 h-[100px] md:h-[120px] group">
-        <div className="absolute inset-0 opacity-0 group-hover:opacity-40 transition-opacity duration-500">
-          <img
-            src="/image2.jpg"
-            alt="Navbar Background"
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="relative flex justify-between items-center h-full px-6 py-4 backdrop-blur-md bg-white/10 border-b border-white/20 shadow-lg rounded-b-2xl">
-          <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-white/5 to-transparent pointer-events-none z-[-1]" />
-          <div className="flex items-center gap-2">
-            <img src="/logo.png" alt="Logo" className="h-14 w-auto ml-4" />
-          </div>
-          <nav className="hidden md:flex gap-6 text-sm font-medium">
-            <a href="#overview" className="hover:text-pink-500 transition">Event Overview</a>
-            <a href="#agenda" className="hover:text-pink-500 transition">Agenda</a>
-            <a href="#venue" className="hover:text-pink-500 transition">Venue</a>
-          </nav>
-          <Button className="bg-pink-600 hover:bg-pink-700 text-white text-sm px-5 py-2">
-            Register Now
-          </Button>
-        </div>
-      </header>
+      <Navbar />
 
       {/* Hero Section */}
-      <section className="flex flex-col md:flex-row items-center justify-center gap-10 px-6 py-24 relative z-10 overflow-hidden">
+      <section className="mt-[120px] flex flex-col md:flex-row items-center justify-center gap-10 px-6 py-24 relative z-10 overflow-hidden">
         {/* Background Glows */}
         <div className="absolute inset-0 overflow-hidden -z-10">
           <div className="absolute top-20 left-10 w-80 h-80 bg-purple-700 opacity-20 blur-3xl rounded-full animate-pulse" />
@@ -119,20 +98,28 @@ export default function Home() {
         </motion.div>
       </section>
 
-     {/* Event Overview Section */}
-     <EventOverview />
+      {/* Event Overview Section */}
+      <div id="overview">
+        <EventOverview />
+      </div>
 
-     {/* Speakers Section */}
-     <SpeakersPage />
+      {/* Speakers Section */}
+      <div id="speakers">
+        <SpeakersPage />
+      </div>
 
-       {/* Agenda Section */}
-       <Agenda />
+      {/* Agenda Section */}
+      <div id="agenda">
+        <Agenda />
+      </div>
 
-        {/* About Section */}
+      {/* About Finastra Section */}
+      <div id="about">
         <About />
+      </div>
 
-        {/* Footer Section */}
-        <Footer />
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
