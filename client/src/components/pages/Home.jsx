@@ -1,7 +1,8 @@
 import { Button } from "../ui/button";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import EventOverview from "../pages/eventOverView";
+import EventOverview from "./eventOverView";
+import SpeakersPage from "./speakers";
 
 export default function Home() {
   const [daysLeft, setDaysLeft] = useState(0);
@@ -117,6 +118,9 @@ export default function Home() {
 
      {/* Event Overview Section */}
      <EventOverview />
+
+     {/* Speakers Section */}
+     <SpeakersPage />
     </div>
   );
 }
