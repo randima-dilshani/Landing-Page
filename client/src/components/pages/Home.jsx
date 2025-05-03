@@ -8,6 +8,7 @@ import About from "./about";
 import Footer from "./footer";
 import Navbar from "./navBar";
 
+
 export default function Home() {
   const [daysLeft, setDaysLeft] = useState(0);
 
