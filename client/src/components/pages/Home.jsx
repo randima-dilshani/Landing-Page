@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import EventOverview from "./eventOverView";
 import SpeakersPage from "./speakers";
+import Agenda from "./agenda";
+import About from "./about";
 
 export default function Home() {
   const [daysLeft, setDaysLeft] = useState(0);
@@ -121,6 +123,12 @@ export default function Home() {
 
      {/* Speakers Section */}
      <SpeakersPage />
+
+       {/* Agenda Section */}
+       <Agenda />
+
+        {/* About Section */}
+        <About />
     </div>
   );
 }

@@ -46,12 +46,18 @@ export default function EventOverview() {
         whileInView="show"
         viewport={{ once: true, amount: 0.3 }}
       >
-        <motion.h2
-          variants={fadeInUp}
-          className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-pink-500 via-red-400 to-yellow-300 text-transparent bg-clip-text mb-6"
-        >
-          Event Overview
-        </motion.h2>
+       <motion.h2
+  variants={fadeInUp}
+  className="font-bold bg-gradient-to-r from-pink-500 via-red-400 to-yellow-300 text-transparent bg-clip-text mb-6"
+  style={{
+    fontSize: "56px", // ~equivalent to md:text-4xl or larger
+    lineHeight: "1.2",
+    textAlign: "center",
+    letterSpacing: "-0.02em"
+  }}
+>
+  Event Overview
+</motion.h2>
 
         <motion.p variants={fadeInUp} className="text-lg leading-8 text-gray-200">
           Join us on <strong>April 9th in Cairo, Egypt</strong>, for Finastra's Universal Banking Forum,

@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Spotlight } from "../ui/spotLight";
 
 const speakers = [
   {
@@ -97,25 +96,29 @@ const speakers = [
 
 export default function SpeakersPage() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] min-h-screen py-24 px-6">
-      <Spotlight className="absolute left-0 top-0 z-0 h-full w-full" />
-
+    <section className="relative bg-[#0c0a1a] min-h-screen py-24 px-6 text-white">
       <div className="relative z-10 max-w-7xl mx-auto text-center">
-        <motion.h2
-          className="text-5xl font-bold text-white mb-16 tracking-tight"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true }}
-        >
-          Our Speakers
-        </motion.h2>
+      <motion.h2
+  className="text-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-red-400 to-yellow-300 mb-16 tracking-tight"
+  style={{
+    fontSize: "56px",       // Equivalent to text-5xl or larger
+    lineHeight: "1.2",
+    letterSpacing: "-0.02em"
+  }}
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, ease: "easeOut" }}
+  viewport={{ once: true }}
+>
+  Our Speakers
+</motion.h2>
+
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
           {speakers.map((speaker, index) => (
             <motion.div
               key={index}
-              className="bg-gradient-to-b from-purple-900/40 to-black/70 backdrop-blur-md p-6 rounded-2xl text-center shadow-xl transition-all duration-300"
+              className="bg-[#1a152b] p-6 rounded-2xl text-center shadow-xl transition-all duration-300"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
