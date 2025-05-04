@@ -1,4 +1,4 @@
-# 🌐 Reimagine Banking - Landing Page Clone
+# 🌐 Reimagine Banking - Landing Page
 
 This project is a modern, responsive recreation of the Finastra Event Landing Page, designed with a creative layout, smooth animations, and interactive components. It leverages React, Vite, Tailwind CSS, Framer Motion, and React Icons, with form data stored in local storage for a functional registration experience.
 
