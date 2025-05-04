@@ -9,22 +9,22 @@ Node.js (>= 14.x)
 
 npm or yarn
 
-📦 Installation
+# 📦 Installation
 
-# Clone the repository
-git clone https://github.com/your-username/event-landing-page.git
+Clone the repository
+git clone https://github.com/randima-dilshani/Landing-Page.git
 
-# Navigate into the project folder
+Navigate into the project folder
 cd event-landing-page
 
-# Install dependencies
+Install dependencies
 npm install
-# or
+ or
 yarn install
 
-🧪 Run the Development Server
+# 🧪 Run the Development Server
 
 npm run dev
-# or
+ or
 yarn dev
 
