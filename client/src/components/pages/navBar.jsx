@@ -89,25 +89,27 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* Mobile Sidebar */}
-      {isSidebarOpen && (
-        <div className="fixed inset-0 z-40 bg-black bg-opacity-60 md:hidden">
-          <div className="fixed top-0 left-0 w-64 h-full bg-white shadow-lg p-6 text-black z-50">
-            <div className="flex justify-between items-center mb-6">
-              <h2 className="text-xl font-bold">Menu</h2>
-              <button onClick={() => setIsSidebarOpen(false)}>
-                <FiX className="text-2xl" />
-              </button>
-            </div>
-            <nav className="flex flex-col gap-4 text-lg font-semibold">
-              <a href="#overview" onClick={() => setIsSidebarOpen(false)}>Event Overview</a>
-              <a href="#speakers" onClick={() => setIsSidebarOpen(false)}>Our Speakers</a>
-              <a href="#agenda" onClick={() => setIsSidebarOpen(false)}>Agenda</a>
-              <a href="#about" onClick={() => setIsSidebarOpen(false)}>About Finastra</a>
-            </nav>
-          </div>
-        </div>
-      )}
+    {/* Mobile Sidebar */}
+{isSidebarOpen && (
+  <div className="fixed inset-0 z-40 bg-black bg-opacity-60 md:hidden">
+    <div className="fixed top-0 left-0 w-64 h-full bg-gradient-to-b from-[#1a0033] via-[#0d001a] to-black shadow-lg p-6 text-white z-50">
+      <div className="flex justify-between items-center mb-6">
+        <h2 className="text-xl font-bold">Menu</h2>
+        <button onClick={() => setIsSidebarOpen(false)}>
+          <FiX className="text-2xl" />
+        </button>
+      </div>
+      <nav className="flex flex-col gap-8 text-lg font-semibold">
+        <a href="#overview" onClick={() => setIsSidebarOpen(false)} className="hover:text-pink-400">Event Overview</a>
+        <a href="#overview" onClick={() => setIsSidebarOpen(false)} className="hover:text-pink-400">Event Overview</a>
+        <a href="#speakers" onClick={() => setIsSidebarOpen(false)} className="hover:text-pink-400">Our Speakers</a>
+        <a href="#agenda" onClick={() => setIsSidebarOpen(false)} className="hover:text-pink-400">Agenda</a>
+        <a href="#about" onClick={() => setIsSidebarOpen(false)} className="hover:text-pink-400">About Finastra</a>
+      </nav>
+    </div>
+  </div>
+)}
+
 
       {/* Register Modal */}
       {showModal && (
