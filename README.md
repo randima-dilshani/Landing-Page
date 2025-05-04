@@ -1,30 +1,57 @@
-# 🚀 Event Landing Page
+# 🌐 Reimagine Banking - Landing Page Clone
 
-This is a modern and creative event landing page built with React and Tailwind CSS. It includes sections like Hero, Event Overview, Speakers, Agenda, and a registration modal.
+This project is a modern, responsive recreation of the Finastra Event Landing Page, designed with a creative layout, smooth animations, and interactive components. It leverages React, Vite, Tailwind CSS, Framer Motion, and React Icons, with form data stored in local storage for a functional registration experience.
 
-⚙️ Prerequisites
-Make sure you have the following installed:
+# 🚀 Live Demo
 
-Node.js (>= 14.x)
+👉 https://event-landing-page-khaki.vercel.app/
 
-npm or yarn
+# ⚙️ Technologies Used
 
-# 📦 Installation
+* React – Frontend framework for building the UI
 
-Clone the repository
-git clone https://github.com/randima-dilshani/Landing-Page.git
+* Vite – Fast build tool and development server
 
-Navigate into the project folder
-cd event-landing-page
+* Tailwind CSS – Utility-first CSS framework for styling
+
+* Framer Motion – For smooth animations and transitions
+
+* React Icons – Icon library for elegant icons
+
+* Local Storage – Used to store registration form data client-side (in JSON format)
+
+#📋 Features
+
+* Custom animated navigation bar with modal registration form
+
+* Smooth animations using Framer Motion
+
+* Registration form with input validation
+
+* Data persistence using localStorage
+
+* Fully responsive and mobile-friendly layout
+
+* Clean and modern UI design inspired by Finastra’s branding
+
+# 📝 Installation
+
+Clone the repo
+git clone https://github.com/yourusername/your-repo-name
+
+Navigate to project directory
+cd your-repo-name
 
 Install dependencies
 npm install
- or
-yarn install
 
-# 🧪 Run the Development Server
-
+Start development server
 npm run dev
- or
-yarn dev
+
+# 🗃️ Data Handling
+
+Form data from the registration modal is stored in the browser's localStorage in JSON format to simulate persistent storage. This can easily be replaced with a backend API or database integration (e.g., SQLite, MySQL) if required.
+
+
+
 
