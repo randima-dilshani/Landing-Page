@@ -32,7 +32,7 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="mt-[120px] flex flex-col md:flex-row items-center justify-center gap-10 px-6 py-24 relative z-10 overflow-hidden">
+      <section className="mt-[110px] flex flex-col md:flex-row items-center justify-center gap-10 px-6 py-24 relative z-10 overflow-hidden">
         
         {/* Glowing Background Effects */}
         <div className="absolute inset-0 overflow-hidden -z-10">
