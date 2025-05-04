@@ -15,7 +15,7 @@ const container = {
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 };
 
 const slideFromLeft = {
@@ -46,18 +46,18 @@ export default function EventOverview() {
         whileInView="show"
         viewport={{ once: true, amount: 0.3 }}
       >
-       <motion.h2
-  variants={fadeInUp}
-  className="font-bold bg-gradient-to-r from-pink-500 via-red-400 to-yellow-300 text-transparent bg-clip-text mb-6"
-  style={{
-    fontSize: "56px", 
-    lineHeight: "1.2",
-    textAlign: "center",
-    letterSpacing: "-0.02em"
-  }}
->
-  Event Overview
-</motion.h2>
+        <motion.h2
+          variants={fadeInUp}
+          className="font-bold bg-gradient-to-r from-pink-500 via-red-400 to-yellow-300 text-transparent bg-clip-text mb-6"
+          style={{
+            fontSize: "56px",
+            lineHeight: "1.2",
+            textAlign: "center",
+            letterSpacing: "-0.02em",
+          }}
+        >
+          Event Overview
+        </motion.h2>
 
         <motion.p variants={fadeInUp} className="text-lg leading-8 text-gray-200">
           Join us on <strong>April 9th in Cairo, Egypt</strong>, for Finastra's Universal Banking Forum,
@@ -66,11 +66,11 @@ export default function EventOverview() {
         </motion.p>
 
         <motion.p variants={fadeInUp} className="text-lg leading-8 mt-6 text-gray-300">
-        Our forum will bring together business and technology experts, industry leaders, and visionaries to share their insights on the latest trends and challenges in the banking sector. You'll gain valuable knowledge on topics such as Generative AI, the impact of volatility, globalization challenges, persistent supply chain issues, recession threats, shifts in competitive dynamics, and evolving regulations.
+          Our forum will bring together business and technology experts, industry leaders, and visionaries to share their insights on the latest trends and challenges in the banking sector. You'll gain valuable knowledge on topics such as Generative AI, the impact of volatility, globalization challenges, persistent supply chain issues, recession threats, shifts in competitive dynamics, and evolving regulations.
         </motion.p>
 
         <motion.p variants={fadeInUp} className="text-lg leading-8 mt-6 text-gray-300">
-        Each session will delve into the implications, challenges, and opportunities these topics present, providing you with practical strategies to leverage the latest technologies and capitalize on emerging opportunities. This is a unique chance to learn from the best in the industry, stay ahead of the curve, and connect with fellow retail banking professionals.
+          Each session will delve into the implications, challenges, and opportunities these topics present, providing you with practical strategies to leverage the latest technologies and capitalize on emerging opportunities. This is a unique chance to learn from the best in the industry, stay ahead of the curve, and connect with fellow retail banking professionals.
         </motion.p>
 
         <motion.p variants={fadeInUp} className="text-lg leading-8 mt-6 text-gray-200">
@@ -81,40 +81,53 @@ export default function EventOverview() {
 
       {/* Reasons to attend block */}
       <motion.div
-  className="relative z-10 max-w-6xl mx-auto mt-24 flex flex-col md:flex-row items-center gap-10 bg-[#5f23b1] p-10 rounded-[3rem]"
-  initial="hidden"
-  whileInView="show"
-  viewport={{ once: true, amount: 0.3 }}
->
-  {/* Reasons list - Now on the left */}
-  <motion.div
-    className="w-full md:w-1/2 text-left text-white"
-    variants={slideFromLeft}
-  >
-    <h3 className="text-2xl md:text-3xl font-semibold mb-6">
-      Top Reasons Why This is the Only Conference You Need to Attend in 2025
-    </h3>
-    <ul className="space-y-4 text-lg leading-7">
-      <li>💡 Learn from industry experts</li>
-      <li>📈 Stay ahead of emerging trends</li>
-      <li>🤝 Connect with fellow banking professionals</li>
-      <li>🎓 Enhance your knowledge, skills, and network</li>
-      <li>💬 Share your expertise and experience with peers</li>
-    </ul>
-  </motion.div>
+        className="relative z-10 max-w-6xl mx-auto mt-24 flex flex-col md:flex-row items-center gap-12"
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        {/* Left: Image */}
+        <motion.div
+          className="w-full md:w-1/2"
+          variants={slideFromLeft}
+        >
+          <img
+            src="/image3.jpg"
+            alt="Event Reasons"
+            className="w-full h-auto rounded-3xl shadow-lg object-cover"
+          />
+        </motion.div>
 
-  {/* Image - Now on the right */}
-  <motion.div
-    className="w-full md:w-1/2 rounded-2xl overflow-hidden"
-    variants={slideFromRight}
-  >
-    <img
-      src="/image3.jpg"
-      alt="Event Reasons"
-      className="w-full h-auto object-cover rounded-2xl"
-    />
-  </motion.div>
-</motion.div>
+        {/* Right: Reasons list */}
+        <motion.div
+          className="w-full md:w-1/2 text-white"
+          variants={slideFromRight}
+        >
+          <h3 className="text-2xl md:text-3xl font-semibold mb-6 leading-tight">
+            Top Reasons Why This is the Only Conference You Need to Attend in 2025
+          </h3>
+
+          <motion.ul
+            className="space-y-3 text-lg leading-7 text-gray-200"
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            {[
+              "💡 Learn from industry experts",
+              "📈 Stay ahead of emerging trends",
+              "🤝 Connect with fellow banking professionals",
+              "🎓 Enhance your knowledge, skills, and network",
+              "💬 Share your expertise and experience with peers",
+            ].map((item, i) => (
+              <motion.li key={i} variants={fadeInUp}>
+                {item}
+              </motion.li>
+            ))}
+          </motion.ul>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

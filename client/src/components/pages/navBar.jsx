@@ -47,16 +47,18 @@ export default function Navbar() {
 
   const closeModal = () => {
     setShowModal(false);
-    setSuccessMessage(""); // Clear message when modal is closed manually
+    setSuccessMessage("");
   };
 
   return (
     <>
       <header
         className="fixed top-0 w-full z-50 h-[100px] md:h-[120px]
-        backdrop-blur-[30px] bg-gradient-to-r from-[#2c003e]/80 via-[#0a0a0a]/70 to-[#1b0033]/80
-        border-2 border-white/20
-        shadow-[0px_0px_30px_rgba(228,227,237,0.2)]"
+        bg-gradient-to-tr from-[#1a0033] 
+        bg-opacity-100 
+        backdrop-blur-[30px] bg-black/60
+        border border-white/20
+        shadow-[0_0_30px_rgba(228,227,237,0.2)]"
       >
         <div className="h-full flex justify-between items-center px-6 py-4 text-white">
           <div className="flex items-center gap-2">
@@ -97,18 +99,24 @@ export default function Navbar() {
             className="bg-white p-8 rounded-xl shadow-lg w-[90%] max-w-md relative"
             onClick={(e) => e.stopPropagation()}
           >
-            <button
-              className="absolute top-3 right-4 text-gray-500 hover:text-black text-xl"
-              onClick={closeModal}
-            >
-              &times;
-            </button>
-
             <h2 className="text-xl font-bold mb-4">Register</h2>
 
             {successMessage ? (
-              <div className="text-green-600 font-medium text-center mb-4">
-                {successMessage}
+              <div className="flex flex-col items-center justify-center text-center space-y-4 py-6">
+                <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center shadow-md animate-bounce">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-8 w-8"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold text-green-700">Registration Successful!</h3>
+                <p className="text-sm text-gray-600">Thank you for registering. We’ll be in touch shortly.</p>
               </div>
             ) : (
               <form className="space-y-4" onSubmit={handleSubmit}>

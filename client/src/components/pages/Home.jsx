@@ -8,7 +8,6 @@ import About from "./about";
 import Footer from "./footer";
 import Navbar from "./navBar";
 
-
 export default function Home() {
   const [daysLeft, setDaysLeft] = useState(0);
 
@@ -25,14 +24,17 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="relative min-h-screen text-white font-sans bg-gradient-to-tr from-[#1a0033] via-black to-[#0f0c29] scroll-smooth">
+    <div className="relative text-white font-sans scroll-smooth">
+      {/* Full-page background */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-tr from-[#1a0033] via-black to-[#0f0c29]" />
+
       {/* Navbar */}
       <Navbar />
 
       {/* Hero Section */}
       <section className="mt-[120px] flex flex-col md:flex-row items-center justify-center gap-10 px-6 py-24 relative z-10 overflow-hidden">
         
-        {/* Background Glows */}
+        {/* Glowing Background Effects */}
         <div className="absolute inset-0 overflow-hidden -z-10">
           <div className="absolute top-20 left-10 w-80 h-80 bg-purple-700 opacity-20 blur-3xl rounded-full animate-pulse" />
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-pink-500 opacity-20 blur-3xl rounded-full animate-pulse" />
@@ -55,19 +57,19 @@ export default function Home() {
           transition={{ duration: 1 }}
           className="w-[520px] md:w-[600px] lg:w-[600px] bg-white/5 backdrop-blur-lg p-10 rounded-2xl shadow-2xl z-10 text-center border border-white/10"
         >
-          {/* Highlighted Host Text */}
+          {/* Hosted By */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 1 }}
             className="mb-6"
           >
-            <p className="text-2xl md:text-3xl text-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400 uppercase tracking-wider drop-shadow-lg">
+            <p className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400 uppercase tracking-wider drop-shadow-lg">
               Hosted by FINASTRA
             </p>
           </motion.div>
 
-          {/* Title and Subtitle */}
+          {/* Title */}
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -95,7 +97,7 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Countdown Button */}
+          {/* Countdown */}
           <motion.div
             className="mt-8 hover:scale-105 transition-transform duration-300 inline-block"
             animate={{ scale: [1, 1.05, 1] }}
@@ -123,7 +125,7 @@ export default function Home() {
         <Agenda />
       </div>
 
-      {/* About Finastra Section */}
+      {/* About Section */}
       <div id="about">
         <About />
       </div>
