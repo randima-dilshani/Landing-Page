@@ -20,7 +20,7 @@ This project is a modern, responsive recreation of the Finastra Event Landing Pa
 
 * Local Storage – Used to store registration form data client-side (in JSON format)
 
-#📋 Features
+# 📋 Features
 
 * Custom animated navigation bar with modal registration form
 
